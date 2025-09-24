@@ -6,8 +6,9 @@
 - **Features**: Homepage with scope & sequence, interactive session pages, facilitator guides, and program information
 
 ## URLs
+- **Production**: https://emergingleaders.pages.dev
 - **Development**: https://3000-i7zdhyrscumkcpwa7sszu-6532622b.e2b.dev
-- **GitHub**: Repository will be available after deployment setup
+- **GitHub**: https://github.com/Eggmanaa/Emerging-Leaders-Advisory-Program
 
 ## Data Architecture
 - **Data Models**: Static content-based architecture with structured session guides
@@ -102,9 +103,10 @@
 4. Access session overviews to understand program depth
 
 ## Deployment
-- **Platform**: Cloudflare Pages (ready for deployment)
-- **Status**: ✅ Development Active - Running locally
+- **Platform**: Cloudflare Pages
+- **Status**: ✅ Production Live at https://emergingleaders.pages.dev
 - **Tech Stack**: Hono + TypeScript + Vite + Tailwind-inspired CSS
+- **Project Name**: emergingleaders
 - **Last Updated**: 2024-09-24
 
 ## Technical Notes
