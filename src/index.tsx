@@ -28,8 +28,8 @@ app.get('/', (c) => {
           <li><a href="/session-1">Session 1: Digital Engagement</a></li>
           <li><a href="/session-2">Session 2: ESSENCE of Adolescence</a></li>
           <li><a href="/session-3">Session 3: 22 Relational Needs</a></li>
-          <li><a href="/session-4">Session 4: TBA</a></li>
-          <li><a href="/session-5">Session 5: TBA</a></li>
+          <li><a href="/session-4">Session 4: Zones of Regulation</a></li>
+          <li><a href="/session-5">Session 5: 7 Types of Relationships</a></li>
         </ul>
       </nav>
 
@@ -160,16 +160,16 @@ app.get('/', (c) => {
               <p>Building healthy relationships and communication skills</p>
               <span className="duration">30 minutes</span>
             </a>
-            <div className="session-card coming-soon">
-              <h4>Session 4: Coming Soon</h4>
-              <p>Additional leadership development content</p>
+            <a href="/session-4" className="session-card">
+              <h4>Session 4: Zones of Emotional Regulation</h4>
+              <p>Learning to recognize and manage emotional states using polyvagal theory</p>
               <span className="duration">30 minutes</span>
-            </div>
-            <div className="session-card coming-soon">
-              <h4>Session 5: Coming Soon</h4>
-              <p>Final integration and application session</p>
+            </a>
+            <a href="/session-5" className="session-card">
+              <h4>Session 5: 7 Types of Relationships</h4>
+              <p>Understanding relationship dynamics and building healthy connections</p>
               <span className="duration">30 minutes</span>
-            </div>
+            </a>
           </div>
         </section>
       </main>
@@ -1309,38 +1309,1166 @@ app.get('/session-3', (c) => {
   )
 })
 
-// Session 4: Coming Soon
+// Session 4: Zones of Regulation
 app.get('/session-4', (c) => {
   return c.render(
-    <div className="session-page coming-soon">
+    <div className="session-page">
       <nav className="breadcrumb">
-        <a href="/">Home</a> {' > '} <span>Session 4: Coming Soon</span>
+        <a href="/">Home</a> {' > '} <span>Session 4: Zones of Regulation</span>
       </nav>
       
-      <div className="coming-soon-content">
-        <h1>Session 4: Coming Soon</h1>
-        <p>This session is currently in development and will be available soon.</p>
-        <p>Check back later for the complete facilitator guide.</p>
-        <a href="/" className="back-home">← Back to Home</a>
+      <div dangerouslySetInnerHTML={{
+        __html: `
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 4: Zones of Emotional Regulation - Complete Facilitator Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      @page {
+        size: tabloid landscape;
+        margin: 0.4in;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        line-height: 1.3;
+        margin: 0;
+        padding: 0.4in;
+        max-width: none;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .header {
+        background: #1e3a8a;
+        color: white;
+        padding: 15px;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+        color: white;
+      }
+
+      .header h2 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+        color: #d97706;
+      }
+
+      .header p {
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .time-badge {
+        background: #d97706;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 9px;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      .section {
+        background: white;
+        border: 2px solid #1e3a8a;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .section-header {
+        background: #1e3a8a;
+        color: white;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .section-content {
+        padding: 12px;
+      }
+
+      .activity-box {
+        background: #dbeafe;
+        padding: 8px;
+        margin: 8px 0;
+        border-left: 3px solid #d97706;
+      }
+
+      .instruction-box {
+        background: #fef3c7;
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 4px;
+      }
+
+      .zones-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        margin: 10px 0;
+      }
+
+      .zone-box {
+        padding: 8px;
+        border-radius: 4px;
+        border: 2px solid;
+      }
+
+      .zone-red {
+        background: #fee2e2;
+        border-color: #ef4444;
+      }
+
+      .zone-green {
+        background: #dcfce7;
+        border-color: #22c55e;
+      }
+
+      .zone-blue {
+        background: #dbeafe;
+        border-color: #3b82f6;
+      }
+
+      .zone-title {
+        font-weight: bold;
+        font-size: 10px;
+        margin-bottom: 3px;
+        text-align: center;
+      }
+
+      .zone-desc {
+        font-size: 9px;
+        margin-bottom: 3px;
+      }
+
+      .zone-detail {
+        font-size: 8px;
+        line-height: 1.2;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      h3 {
+        font-size: 12px;
+        margin: 8px 0 6px 0;
+        color: #1e3a8a;
+      }
+
+      h4 {
+        font-size: 11px;
+        margin: 6px 0 4px 0;
+        color: #1e3a8a;
+      }
+
+      h5 {
+        font-size: 10px;
+        margin: 4px 0 3px 0;
+        font-weight: bold;
+      }
+
+      ul,
+      ol {
+        margin: 4px 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin-bottom: 2px;
+        font-size: 9px;
+      }
+
+      p {
+        margin: 4px 0;
+        font-size: 9px;
+      }
+
+      .question-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 4px 0;
+      }
+
+      .question-number {
+        background: #d97706;
+        color: white;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        font-weight: bold;
+        margin-right: 6px;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        background: #1e3a8a;
+        color: white;
+        padding: 8px;
+        text-align: center;
+        margin-top: 12px;
+        font-size: 9px;
+      }
+
+      .highlight-box {
+        background: #fef3c7;
+        border-left: 4px solid #d97706;
+        padding: 8px;
+        margin: 8px 0;
+        font-size: 9px;
+      }
+
+      .key-point {
+        background: #fee2e2;
+        border: 1px solid #ef4444;
+        padding: 6px;
+        margin: 6px 0;
+        border-radius: 4px;
+        font-size: 9px;
+      }
+
+      @media print {
+        body {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+
+        .section,
+        .activity-box,
+        .instruction-box,
+        .zone-box {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-container">
+          <div style="font-size: 10px">EMERGING LEADERS ADVISORY PROGRAM</div>
+          <div style="font-size: 10px">BISHOP GARCÍA DIEGO HIGH SCHOOL</div>
+        </div>
+        <h1>Session 4: Zones of Emotional Regulation</h1>
+        <h2>(Polyvagal Theory)</h2>
+        <p><span style="color: rgb(255, 255, 255)">Where Character Grows and Leaders Emerge</span></p>
+        <div style="margin-top: 8px">
+          <span class="time-badge"><i class="fas fa-clock"></i> 30 Minutes Total</span>
+        </div>
       </div>
+
+      <div class="main-content">
+        <!-- Welcome + Check-in Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-chart-line"></i> WELCOME + CHECK-IN</span>
+            <span class="time-badge">4 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>Activity: Emotional Intensity Spectrogram</h3>
+
+            <div class="activity-box">
+              <h5>Instructions for Facilitators:</h5>
+              <ol>
+                <li>
+                  <strong>Setup:</strong> Designate two opposite walls in the room for each spectrogram measurement
+                </li>
+                <li>
+                  <strong>First Spectrogram:</strong> Point to one wall as "high emotional intensity" and the other as
+                  "low emotional intensity." Have students stand somewhere along the spectrum that represents them
+                </li>
+                <li>
+                  <strong>Second Spectrogram:</strong> Point to one wall as "able to feel and deal with highly positive
+                  emotions" and the other as "highly positive emotions are difficult to feel and deal with"
+                </li>
+                <li>
+                  <strong>Third Spectrogram:</strong> Point to one wall as "able to feel and deal with highly negative
+                  emotions" and the other as "highly negative emotions are difficult to feel and deal with"
+                </li>
+              </ol>
+            </div>
+
+            <div class="instruction-box">
+              <h5>Purpose & Expected Outcomes:</h5>
+              <ul>
+                <li>Increase self-awareness about emotional intensity and regulation patterns</li>
+                <li>Normalize different emotional experiences and comfort levels</li>
+                <li>Introduce the concept that emotional regulation is a skill that can be developed</li>
+                <li>Set the stage for learning about emotional zones and regulation strategies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini-Teach Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-brain"></i> MINI-TEACH</span>
+            <span class="time-badge">8 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>Zones of Emotional Regulation</h3>
+
+            <div style="background: #f3f4f6; padding: 8px; margin: 6px 0; font-size: 9px">
+              <strong
+                >The Zones of Regulation is a framework that helps us understand and manage our emotional states. Based
+                on polyvagal theory, it identifies three main zones that describe our nervous system's responses to
+                different situations. Learning to recognize which zone we're in and developing strategies to get back to
+                "the green zone" helps us regulate our emotions and respond more effectively to life's
+                challenges.</strong
+              >
+            </div>
+
+            <h4>The Three Zones of Regulation</h4>
+
+            <div class="zones-grid">
+              <div class="zone-box zone-red">
+                <div class="zone-title">Red Zone — Too Much Emotion</div>
+                <div class="zone-desc"><strong>Response:</strong> Fight or flight</div>
+                <div class="zone-desc"><strong>Emotions:</strong> Rage, fear, anxiety</div>
+                <div class="zone-detail"><strong>Impact:</strong> Hard to think clearly</div>
+              </div>
+
+              <div class="zone-box zone-green">
+                <div class="zone-title">Green Zone — Feeling & Dealing</div>
+                <div class="zone-desc"><strong>Response:</strong> Calm but alert</div>
+                <div class="zone-desc"><strong>Emotions:</strong> All emotions welcome, but managed</div>
+                <div class="zone-detail"><strong>Impact:</strong> Able to think, connect, and act</div>
+              </div>
+
+              <div class="zone-box zone-blue">
+                <div class="zone-title">Blue Zone — Too Little Emotion</div>
+                <div class="zone-desc"><strong>Response:</strong> Freeze or shut down</div>
+                <div class="zone-desc"><strong>Emotions:</strong> Numbness, shame, withdrawal</div>
+                <div class="zone-detail"><strong>Impact:</strong> Disconnected from others</div>
+              </div>
+            </div>
+
+            <div class="key-point">
+              <p>
+                <strong><i class="fas fa-exclamation-triangle"></i> Key Point:</strong> None of these zones are "bad" —
+                they're survival responses. But leaders need tools to return to Green so they can respond instead of
+                react.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regulation Strategies Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-tools"></i> PRACTICING THREE REGULATION STRATEGIES</span>
+          <span class="time-badge">Part of Mini-Teach</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px">
+            <div class="activity-box">
+              <h5><i class="fas fa-lungs"></i> Deep Breathing:</h5>
+              <p>
+                Practice breathing in through the nose and out through the mouth with a focus on the rise and fall of
+                the stomach. Have students place one hand on their chest and one on their stomach to feel the
+                difference.
+              </p>
+            </div>
+
+            <div class="activity-box">
+              <h5><i class="fas fa-eye"></i> 5 Senses Grounding:</h5>
+              <p>Guide students through identifying:</p>
+              <ul>
+                <li>What do you hear?</li>
+                <li>What do you see?</li>
+                <li>What do you smell?</li>
+                <li>What do you taste?</li>
+                <li>What do you feel?</li>
+              </ul>
+            </div>
+
+            <div class="activity-box">
+              <h5><i class="fas fa-anchor"></i> Grounding Through Feet:</h5>
+              <p>
+                Have students feel and press their feet against the ground, noticing the connection and stability this
+                provides.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-masks-theater"></i> ACTIVITY: TELEPHONE CHARADES</span>
+          <span class="time-badge">15 Minutes</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px">
+            <div class="activity-box">
+              <h5><i class="fas fa-list-check"></i> Materials Needed:</h5>
+              <ul>
+                <li>
+                  Pre-written emotion cards or list (happy, sad, angry, excited, nervous, confused, surprised,
+                  frustrated, etc.)
+                </li>
+                <li>Space for teams to line up with room between each person</li>
+                <li>Timer (optional)</li>
+              </ul>
+            </div>
+
+            <div class="instruction-box">
+              <h5><i class="fas fa-gamepad"></i> Game Instructions:</h5>
+              <ol>
+                <li><strong>Team Setup:</strong> Split students into teams of no more than 6 people each</li>
+                <li>
+                  <strong>Line Formation:</strong> Teams line up facing the same direction with space between each
+                  person
+                </li>
+                <li>
+                  <strong>Emotion Display:</strong> Show the first person in each line a written emotion (same emotion
+                  for all teams)
+                </li>
+                <li>
+                  <strong>Silent Communication:</strong> The first person taps the second person's shoulder to turn them
+                  around and acts out the emotion silently
+                </li>
+                <li>
+                  <strong>Pass It Down:</strong> Each person taps the next person and passes along what they think the
+                  emotion is through acting
+                </li>
+                <li><strong>Final Guess:</strong> The last person in each line says what emotion they think it is</li>
+                <li><strong>Scoring:</strong> The team that guesses closest to the original emotion wins that round</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h5><i class="fas fa-lightbulb"></i> Facilitator Tips:</h5>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+              <div>
+                <ul>
+                  <li><strong>Emotion Variety:</strong> Include emotions from all three zones (Blue, Green, Red)</li>
+                  <li><strong>No Talking or Sounds:</strong> Emphasize that only nonverbal communication is allowed</li>
+                  <li>
+                    <strong>Encourage Creativity:</strong> Students can use facial expressions, body language, and
+                    gestures
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li><strong>Multiple Rounds:</strong> Play 3-5 rounds with different emotions</li>
+                  <li>
+                    <strong>Zone Connection:</strong> After each round, briefly identify which zone that emotion belongs
+                    to
+                  </li>
+                  <li>
+                    <strong>Celebrate Attempts:</strong> Focus on effort and creativity rather than perfect accuracy
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debrief Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-comments"></i> DEBRIEF</span>
+          <span class="time-badge">3 Minutes</span>
+        </div>
+        <div class="section-content">
+          <div class="activity-box">
+            <h5>Emotional Growth Reflection:</h5>
+            <div class="question-item">
+              <span class="question-number">1</span>
+              <div>
+                <p>
+                  <strong
+                    >What is the most difficult emotion for you to feel, and what strategy might you use in the future
+                    to grow in feeling that emotion?</strong
+                  >
+                </p>
+                <p style="font-size: 8px; color: #666">
+                  Consider which emotions you tend to avoid and how the regulation strategies we practiced today (deep
+                  breathing, 5 senses grounding, or feet grounding) might help you stay in the green zone when
+                  experiencing challenging emotions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>
+          <strong
+            ><span style="color: rgb(255, 255, 255)"
+              >Bishop García Diego High School - Emerging Leaders Advisory Program</span
+            ></strong
+          >
+        </p>
+        <p><span style="color: rgb(255, 255, 255)"> Based on the Polyvagal Theory by Stephen W. Porges, PhD</span></p>
+      </div>
+    </div>
+  </body>
+</html>
+        `
+      }} />
     </div>
   )
 })
 
-// Session 5: Coming Soon
+// Session 5: 7 Types of Relationships
 app.get('/session-5', (c) => {
   return c.render(
-    <div className="session-page coming-soon">
+    <div className="session-page">
       <nav className="breadcrumb">
-        <a href="/">Home</a> {' > '} <span>Session 5: Coming Soon</span>
+        <a href="/">Home</a> {' > '} <span>Session 5: 7 Types of Relationships</span>
       </nav>
       
-      <div className="coming-soon-content">
-        <h1>Session 5: Coming Soon</h1>
-        <p>This session is currently in development and will be available soon.</p>
-        <p>Check back later for the complete facilitator guide.</p>
-        <a href="/" className="back-home">← Back to Home</a>
+      <div dangerouslySetInnerHTML={{
+        __html: `
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 5: 7 Types of Relationships - Complete Facilitator Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      @page {
+        size: tabloid landscape;
+        margin: 0.4in;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        line-height: 1.3;
+        margin: 0;
+        padding: 0.4in;
+        max-width: none;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .header {
+        background: #1e3a8a;
+        color: white;
+        padding: 15px;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+        color: white;
+      }
+
+      .header h2 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+        color: #d97706;
+      }
+
+      .header p {
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .time-badge {
+        background: #d97706;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 9px;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      .section {
+        background: white;
+        border: 2px solid #1e3a8a;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .section-header {
+        background: #1e3a8a;
+        color: white;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .section-content {
+        padding: 12px;
+      }
+
+      .activity-box {
+        background: #dbeafe;
+        padding: 8px;
+        margin: 8px 0;
+        border-left: 3px solid #d97706;
+      }
+
+      .instruction-box {
+        background: #fef3c7;
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 4px;
+      }
+
+      .relationships-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+        margin: 10px 0;
+      }
+
+      .relationship-box {
+        padding: 6px;
+        border-radius: 4px;
+        border: 2px solid;
+        font-size: 8px;
+      }
+
+      .rel-coaches {
+        background: #f3e8ff;
+        border-color: #8b5cf6;
+      }
+
+      .rel-comrades {
+        background: #dbeafe;
+        border-color: #3b82f6;
+      }
+
+      .rel-casuals {
+        background: #dcfce7;
+        border-color: #22c55e;
+      }
+
+      .rel-colleagues {
+        background: #fef3c7;
+        border-color: #eab308;
+      }
+
+      .rel-care {
+        background: #fed7aa;
+        border-color: #fb923c;
+      }
+
+      .rel-chronics {
+        background: #fee2e2;
+        border-color: #ef4444;
+      }
+
+      .rel-contaminants {
+        background: #374151;
+        border-color: #1f2937;
+        color: white;
+      }
+
+      .rel-title {
+        font-weight: bold;
+        font-size: 9px;
+        margin-bottom: 2px;
+      }
+
+      .rel-desc {
+        font-size: 8px;
+        margin-bottom: 2px;
+      }
+
+      .rel-detail {
+        font-size: 7px;
+        line-height: 1.2;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      h3 {
+        font-size: 12px;
+        margin: 8px 0 6px 0;
+        color: #1e3a8a;
+      }
+
+      h4 {
+        font-size: 11px;
+        margin: 6px 0 4px 0;
+        color: #1e3a8a;
+      }
+
+      h5 {
+        font-size: 10px;
+        margin: 4px 0 3px 0;
+        font-weight: bold;
+      }
+
+      ul,
+      ol {
+        margin: 4px 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin-bottom: 2px;
+        font-size: 9px;
+      }
+
+      p {
+        margin: 4px 0;
+        font-size: 9px;
+      }
+
+      .question-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 4px 0;
+      }
+
+      .question-number {
+        background: #d97706;
+        color: white;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        font-weight: bold;
+        margin-right: 6px;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        background: #1e3a8a;
+        color: white;
+        padding: 8px;
+        text-align: center;
+        margin-top: 12px;
+        font-size: 9px;
+      }
+
+      .ninja-rules {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin: 8px 0;
+      }
+
+      @media print {
+        body {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+
+        .section,
+        .activity-box,
+        .instruction-box,
+        .relationship-box {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-container">
+          <div style="font-size: 10px">EMERGING LEADERS ADVISORY PROGRAM</div>
+          <div style="font-size: 10px">BISHOP GARCÍA DIEGO HIGH SCHOOL</div>
+        </div>
+        <h1>Session 5: 7 Types of Relationships</h1>
+        <h2>(People Fuel, Townsend)</h2>
+        <p><span style="color: rgb(255, 255, 255)">Where Character Grows and Leaders Emerge</span></p>
+        <div style="margin-top: 8px">
+          <span class="time-badge"><i class="fas fa-clock"></i> 30 Minutes Total</span>
+        </div>
       </div>
+
+      <div class="main-content">
+        <!-- Welcome + Check-in Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-fist-raised"></i> WELCOME + CHECK-IN</span>
+            <span class="time-badge">6 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>Activity: Ultimate Ninja</h3>
+
+            <div class="activity-box">
+              <h5>How to Play:</h5>
+              <div class="ninja-rules">
+                <div>
+                  <p><strong>1. Circle Up + Strike Pose:</strong></p>
+                  <ul>
+                    <li>Stand in circle, arms relaxed</li>
+                    <li>Count "NIN-JA!" strike frozen ninja pose</li>
+                    <li>Freeze - feet locked in place</li>
+                  </ul>
+
+                  <p><strong>2. Take Turns Clockwise:</strong></p>
+                  <ul>
+                    <li>One motion to tag another's hand</li>
+                    <li>No pausing or faking halfway</li>
+                  </ul>
+
+                  <p><strong>3. Dodge if Attacked:</strong></p>
+                  <ul>
+                    <li>One defensive motion only</li>
+                    <li>Freeze in new pose after move</li>
+                  </ul>
+                </div>
+                <div>
+                  <p><strong>4. If Tagged:</strong></p>
+                  <ul>
+                    <li>Hand hit: put behind back</li>
+                    <li>Both hands: you're out</li>
+                  </ul>
+
+                  <p><strong>5. Safety & Respect:</strong></p>
+                  <ul>
+                    <li>Light, controlled movements</li>
+                    <li>Precision, not power</li>
+                    <li>Too aggressive = you're out</li>
+                  </ul>
+
+                  <p><strong>6. Last Ninja Wins:</strong></p>
+                  <ul>
+                    <li>Continue until one remains</li>
+                    <li>Quick applause, move to session</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini-Teach Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-users"></i> MINI-TEACH</span>
+            <span class="time-badge">12 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>The Seven C's of Relationships</h3>
+
+            <div style="background: #f3f4f6; padding: 8px; margin: 6px 0; font-size: 9px">
+              <strong
+                >We all choose individuals to be around us, and most of them are pretty good finds. But it's easy to get
+                out of balance and have more "drain" conversations than "gain" conversations. Dr. John Townsend's Seven
+                C's model helps us be intentional about how we spend our time and energy in relationships, ranked from
+                highest to lowest resource for you.</strong
+              >
+            </div>
+
+            <h4>The Seven C's (Highest to Lowest Resource)</h4>
+
+            <div class="relationships-grid">
+              <div class="relationship-box rel-coaches">
+                <div class="rel-title"><i class="fas fa-user-graduate"></i> 1. COACHES</div>
+                <div class="rel-desc">Mentors and guides with expertise who develop you.</div>
+                <div class="rel-detail">
+                  Subject matter experts in leadership, parenting, or growth; know how to coach with theory and steps;
+                  make time "all about you."
+                </div>
+              </div>
+
+              <div class="relationship-box rel-comrades">
+                <div class="rel-title"><i class="fas fa-heart"></i> 2. COMRADES</div>
+                <div class="rel-desc">Your Life Team—3-10 people who know everything about you.</div>
+                <div class="rel-detail">
+                  Know it all about you, accept you fully, tell you needed truths. Fully involved in own growth, want
+                  mutual help.
+                </div>
+              </div>
+
+              <div class="relationship-box rel-casuals">
+                <div class="rel-title"><i class="fas fa-smile"></i> 3. CASUALS</div>
+                <div class="rel-desc">Good, positive friends and neighbors you enjoy.</div>
+                <div class="rel-detail">
+                  Just good, positive people. Kids on same teams, like same activities. Help enjoy life, "farm team" for
+                  Life Team.
+                </div>
+              </div>
+
+              <div class="relationship-box rel-colleagues">
+                <div class="rel-title"><i class="fas fa-briefcase"></i> 4. COLLEAGUES</div>
+                <div class="rel-desc">Competent, relationally-oriented work/school partners.</div>
+                <div class="rel-detail">
+                  Truly competent, relationally oriented, work well on teams. Make work/school energy-producing vs
+                  draining.
+                </div>
+              </div>
+
+              <div class="relationship-box rel-care">
+                <div class="rel-title"><i class="fas fa-hands-helping"></i> 5. CARE</div>
+                <div class="rel-desc">Those you help who need what you can supply.</div>
+                <div class="rel-detail">
+                  People without something you can provide. Help make world better, release oxytocin. Need to give back
+                  but watch energy.
+                </div>
+              </div>
+
+              <div class="relationship-box rel-chronics">
+                <div class="rel-title"><i class="fas fa-exclamation-triangle"></i> 6. CHRONICS</div>
+                <div class="rel-desc">"Bless their heart" individuals with ongoing problems.</div>
+                <div class="rel-detail">
+                  Long-term patterns, flat learning curve. Don't learn from experiences or apply repeated advice. Want
+                  support more than solutions.
+                </div>
+              </div>
+
+              <div class="relationship-box rel-contaminants">
+                <div class="rel-title"><i class="fas fa-biohazard"></i> 7. CONTAMINANTS</div>
+                <div class="rel-desc">People with bad motives who damage others.</div>
+                <div class="rel-detail">
+                  Beyond normal imperfection. Envious, desire to divide and damage. Attack relationships, work,
+                  well-being. Warn and distance.
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-box">
+              <h5>Floor Movement Activity Instructions:</h5>
+              <ol>
+                <li>Lay out 7 C relationship descriptions on ground in line</li>
+                <li>Students walk around reading each description</li>
+                <li>Ask exploration questions one at a time</li>
+                <li>Students move to C-relationship representing their answer</li>
+                <li>2-3 from each area share reasoning</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exploration Questions Section (Full Width) -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-question-circle"></i> EXPLORATION QUESTIONS</span>
+          <span class="time-badge">Part of Mini-Teach</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div class="instruction-box">
+              <h5>Questions 1-4:</h5>
+              <div class="question-item">
+                <span class="question-number">1</span>
+                <span><strong>Which C-role do you have the most people representing in your life?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">2</span>
+                <span><strong>Which C-role do you have the fewest people representing in your life?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">3</span>
+                <span><strong>After a personal win, where do you go to celebrate or share good news?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">4</span>
+                <span
+                  ><strong
+                    >If you're feeling overwhelmed or anxious, whose presence helps you feel seen and supported?</strong
+                  ></span
+                >
+              </div>
+            </div>
+
+            <div class="instruction-box">
+              <h5>Questions 5-8:</h5>
+              <div class="question-item">
+                <span class="question-number">5</span>
+                <span
+                  ><strong>Which C-role gives you the most opportunity to practice setting boundaries?</strong></span
+                >
+              </div>
+              <div class="question-item">
+                <span class="question-number">6</span>
+                <span><strong>Who pushes your buttons most?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">7</span>
+                <span><strong>Who encourages you to step out of your comfort zone?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">8</span>
+                <span
+                  ><strong
+                    >When you need honest, constructive feedback on a mistake, which C-role do you turn to?</strong
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-project-diagram"></i> ACTIVITY: DIAGRAMMING YOUR RELATIONSHIPS</span>
+          <span class="time-badge">10 Minutes</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px">
+            <div class="activity-box">
+              <h5><i class="fas fa-list-check"></i> Materials Needed:</h5>
+              <ul>
+                <li>Paper and pencils/pens for each student</li>
+                <li>Space for small group sharing</li>
+                <li>Optional: colored pencils for different C-types</li>
+              </ul>
+            </div>
+
+            <div class="instruction-box">
+              <h5><i class="fas fa-instructions"></i> Activity Instructions:</h5>
+              <ol>
+                <li><strong>Create Diagram:</strong> Draw relationships in your life</li>
+                <li><strong>Use Shapes:</strong> Triangles for males, circles for females</li>
+                <li><strong>Size Matters:</strong> Shape size = importance in your life</li>
+                <li><strong>Show Closeness:</strong> Proximity = how close you feel</li>
+                <li><strong>Label with C's:</strong> Mark each person's C-relationship type</li>
+                <li><strong>Small Group Share:</strong> Groups of 3-4</li>
+                <li><strong>Reflect:</strong> Which relational type needs development?</li>
+              </ol>
+            </div>
+
+            <div style="background: #f3f4f6; padding: 8px">
+              <h5><i class="fas fa-lightbulb"></i> Facilitator Tips:</h5>
+              <ul>
+                <li><strong>Encourage Honesty:</strong> For personal growth and awareness</li>
+                <li><strong>No Judgment:</strong> Different relationship patterns are normal</li>
+                <li><strong>Privacy Respected:</strong> Choose level of detail to share</li>
+                <li><strong>Focus on Growth:</strong> Identify gaps, not criticize current relationships</li>
+                <li><strong>Time Management:</strong> 5-6 min diagramming, 4-5 min sharing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debrief Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-comments"></i> DEBRIEF</span>
+          <span class="time-badge">2 Minutes</span>
+        </div>
+        <div class="section-content">
+          <div class="activity-box">
+            <h5>Most Trusted Adult Identification:</h5>
+            <div class="question-item">
+              <span class="question-number">1</span>
+              <div>
+                <p>
+                  <strong
+                    >Who would you designate as your Most Trusted Adult that you can go to if you need extra emotional
+                    support, and why?</strong
+                  >
+                </p>
+                <p style="font-size: 8px">
+                  Think about which adult in your life provides the safest space for you to be vulnerable and seek help
+                  when you're struggling. This could be a parent, teacher, coach, counselor, family member, or mentor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>
+          <strong
+            ><span style="color: rgb(255, 255, 255)"
+              >Bishop García Diego High School - Emerging Leaders Advisory Program</span
+            ></strong
+          >
+        </p>
+        <p>
+          <span style="color: rgb(255, 255, 255)">
+            Based on Dr. John Townsend's "People Fuel: Fill Your Tank for Life, Love, and Leadership"</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+        `
+      }} />
     </div>
   )
 })
