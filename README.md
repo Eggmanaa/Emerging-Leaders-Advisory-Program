@@ -38,38 +38,50 @@
    - Four categories of relational needs (Security, Attention, Importance, Access)
    - Interactive relationship mapping and small group discussions
 
-5. ✅ **Navigation System**
+5. ✅ **Session 4: Zones of Emotional Regulation**
+   - Complete facilitator guide based on Polyvagal Theory by Stephen W. Porges
+   - Emotional intensity spectrogram and telephone charades activities
+   - Three zones framework (Red, Green, Blue) with regulation strategies
+   - Practical grounding techniques (breathing, 5 senses, feet grounding)
+
+6. ✅ **Session 5: 7 Types of Relationships**
+   - Complete facilitator guide based on Dr. John Townsend's "People Fuel"
+   - Ultimate Ninja icebreaker game and relationship diagramming activity
+   - Seven C's of relationships (Coaches, Comrades, Casuals, Colleagues, Care, Chronics, Contaminants)
+   - Most Trusted Adult identification and relationship mapping
+
+7. ✅ **Navigation System**
    - Responsive navigation between all pages
    - Breadcrumb navigation for session pages
    - Professional styling with Inter font and school colors
 
-6. ✅ **Responsive Design**
+8. ✅ **Responsive Design**
    - Mobile-friendly layout
    - Professional Catholic school aesthetic
    - Consistent branding with school colors (#1e3a8a blue, #d97706 orange)
 
 ## Functional Entry URIs
 - **/** - Homepage with complete scope and sequence
-- **/session-1** - Digital Engagement & Attention facilitator guide
-- **/session-2** - ESSENCE of Adolescence facilitator guide  
-- **/session-3** - 22 Relational Needs facilitator guide
-- **/session-4** - Coming soon placeholder page
-- **/session-5** - Coming soon placeholder page
+- **/session-1** - Digital Engagement & Attention facilitator guide (Haidt's Anxious Generation)
+- **/session-2** - ESSENCE of Adolescence facilitator guide (Siegel's Developmental Framework)
+- **/session-3** - 22 Relational Needs facilitator guide (Relationship Building)
+- **/session-4** - Zones of Emotional Regulation facilitator guide (Polyvagal Theory)
+- **/session-5** - 7 Types of Relationships facilitator guide (Townsend's People Fuel)
 
 ## Features Not Yet Implemented
-1. **Session 4 & 5 Content** - Awaiting additional facilitator guides from source document
-2. **Cloudflare Pages Deployment** - Ready for production deployment
-3. **Print-Optimized Styling** - Session pages include print CSS for facilitator use
-4. **Interactive Elements** - Could add student response collection, progress tracking
-5. **Admin Dashboard** - Potential future feature for program coordinators
+1. **Cloudflare Pages Deployment** - Ready for production deployment
+2. **Print-Optimized Styling** - Session pages include print CSS for facilitator use
+3. **Interactive Elements** - Could add student response collection, progress tracking
+4. **Admin Dashboard** - Potential future feature for program coordinators
+5. **Search Functionality** - Could add search across session content
 
 ## Recommended Next Steps for Development
-1. **Deploy to Cloudflare Pages** - Set up production environment
-2. **Add Session 4 & 5 Content** - Extract remaining session content from source document
-3. **Enhance Print Layout** - Optimize facilitator guide printing
-4. **Add Analytics** - Track session usage and engagement
-5. **Implement Contact Forms** - Allow program inquiries and applications
-6. **Create Admin Features** - Cohort management and progress tracking
+1. **Deploy to Cloudflare Pages** - Set up production environment with custom domain
+2. **Enhance Print Layout** - Optimize facilitator guide printing for classroom use
+3. **Add Analytics** - Track session usage and engagement with Google Analytics
+4. **Implement Contact Forms** - Allow program inquiries and student applications
+5. **Create Admin Features** - Cohort management and progress tracking dashboard
+6. **Add Search Functionality** - Enable search across all session content and activities
 
 ## User Guide
 ### For Program Administrators:

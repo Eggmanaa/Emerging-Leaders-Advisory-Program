@@ -259,11 +259,13 @@ li {
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   padding: 1.5rem;
+  padding-top: 3rem; /* Add extra top padding for duration tag */
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
   display: block;
   position: relative;
+  min-height: 180px; /* Ensure consistent height */
 }
 
 .session-card:hover {
@@ -276,23 +278,28 @@ li {
   color: #1e3a8a;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  padding-right: 2rem; /* Add padding to prevent overlap with duration tag */
+  line-height: 1.4;
 }
 
 .session-card p {
   color: #6b7280;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .duration {
   background: #d97706;
   color: white;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   position: absolute;
   top: 1rem;
   right: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  z-index: 10; /* Ensure it's above other content */
 }
 
 .session-card.coming-soon {
@@ -426,6 +433,21 @@ li {
   
   .session-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .session-card {
+    min-height: auto; /* Allow flexible height on mobile */
+    padding-top: 2.5rem; /* Reduce top padding on mobile */
+  }
+  
+  .session-card h4 {
+    font-size: 1.1rem; /* Slightly smaller on mobile */
+    padding-right: 1rem; /* Less padding on mobile */
+  }
+  
+  .duration {
+    font-size: 0.7rem; /* Smaller duration tag on mobile */
+    padding: 0.25rem 0.6rem;
   }
   
   .coming-soon-content h1 {
