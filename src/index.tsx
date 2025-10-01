@@ -27,7 +27,7 @@ app.get('/', (c) => {
           <li><a href="/">Home</a></li>
           <li><a href="/session-1">Session 1: Digital Engagement</a></li>
           <li><a href="/session-2">Session 2: ESSENCE of Adolescence</a></li>
-          <li><a href="/session-3">Session 3: 22 Relational Needs</a></li>
+          <li><a href="/session-3">Session 3: Four Quadrants</a></li>
           <li><a href="/session-4">Session 4: Zones of Regulation</a></li>
           <li><a href="/session-5">Session 5: 7 Types of Relationships</a></li>
         </ul>
@@ -987,12 +987,12 @@ app.get('/session-2', (c) => {
   )
 })
 
-// Session 3: 22 Relational Needs
+// Session 3: Four Quadrants
 app.get('/session-3', (c) => {
   return c.render(
     <div className="session-page">
       <nav className="breadcrumb">
-        <a href="/">Home</a> {' > '} <span>Session 3: 22 Relational Needs</span>
+        <a href="/">Home</a> {' > '} <span>Session 3: Four Quadrants</span>
       </nav>
       
       <div dangerouslySetInnerHTML={{
@@ -1002,306 +1002,532 @@ app.get('/session-3', (c) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session 3: 22 Relational Needs - Complete Facilitator Guide</title>
+    <title>Session 3: Four Quadrants - Complete Facilitator Guide</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+      @page {
+        size: 11in 17in;
+        margin: 0.5in;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0.5in;
+        max-width: none;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .header {
+        background: #1e3a8a;
+        color: white;
+        padding: 20px;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 28px;
+        margin: 0 0 8px 0;
+        color: white;
+      }
+
+      .header h2 {
+        font-size: 20px;
+        margin: 0 0 8px 0;
+        color: #d97706;
+      }
+
+      .header p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .logo {
+        height: 45px;
+      }
+
+      .time-badge {
+        background: #d97706;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 11px;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      .section {
+        background: white;
+        border: 2px solid #1e3a8a;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+      }
+
+      .section-header {
+        background: #1e3a8a;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .section-content {
+        padding: 16px;
+      }
+
+      .activity-box {
+        background: #dbeafe;
+        padding: 12px;
+        margin: 12px 0;
+        border-left: 4px solid #d97706;
+      }
+
+      .instruction-box {
+        background: #fef3c7;
+        padding: 12px;
+        margin: 12px 0;
+        border-radius: 6px;
+      }
+
+      .quadrants-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 15px 0;
+      }
+
+      .quadrant-box {
+        padding: 12px;
+        border-radius: 6px;
+        border: 2px solid;
+      }
+
+      .quadrant-1 {
+        background: #dbeafe;
+        border-color: #3b82f6;
+      }
+
+      .quadrant-2 {
+        background: #dcfce7;
+        border-color: #22c55e;
+      }
+
+      .quadrant-3 {
+        background: #fef3c7;
+        border-color: #eab308;
+      }
+
+      .quadrant-4 {
+        background: #fee2e2;
+        border-color: #ef4444;
+      }
+
+      .quadrant-title {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+
+      .quadrant-desc {
+        font-size: 11px;
+        margin-bottom: 5px;
+      }
+
+      .quadrant-detail {
+        font-size: 10px;
+        line-height: 1.3;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      h3 {
+        font-size: 14px;
+        margin: 12px 0 8px 0;
+        color: #1e3a8a;
+      }
+
+      h4 {
+        font-size: 13px;
+        margin: 10px 0 6px 0;
+        color: #1e3a8a;
+      }
+
+      h5 {
+        font-size: 12px;
+        margin: 8px 0 4px 0;
+        font-weight: bold;
+      }
+
+      ul,
+      ol {
+        margin: 6px 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 3px;
+        font-size: 11px;
+      }
+
+      p {
+        margin: 6px 0;
+        font-size: 11px;
+      }
+
+      .question-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 6px 0;
+      }
+
+      .question-number {
+        background: #d97706;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: bold;
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        background: #1e3a8a;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        margin-top: 16px;
+        font-size: 11px;
+      }
+
+      @media print {
         body {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0.5in;
-            max-width: none;
-            background: white;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
         }
-        .container {
-            width: 100%;
-            max-width: none;
-        }
-        .header {
-            background: #1e3a8a;
-            color: white;
-            padding: 20px;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 28px;
-            margin: 0 0 8px 0;
-            color: white;
-        }
-        .header h2 {
-            font-size: 20px;
-            margin: 0 0 8px 0;
-            color: #d97706;
-        }
-        .header p {
-            font-size: 14px;
-            margin: 0;
-        }
-        .time-badge {
-            background: #d97706;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
-        }
-        .section {
-            background: white;
-            border: 2px solid #1e3a8a;
-            margin-bottom: 14px;
-            page-break-inside: avoid;
-        }
-        .section-header {
-            background: #1e3a8a;
-            color: white;
-            padding: 12px 16px;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .section-content {
-            padding: 16px;
-        }
-        .activity-box {
-            background: #dbeafe;
-            padding: 12px;
-            margin: 12px 0;
-            border-left: 4px solid #d97706;
-        }
-        .instruction-box {
-            background: #fef3c7;
-            padding: 12px;
-            margin: 12px 0;
-            border-radius: 6px;
-        }
-        .quadrants-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 15px 0;
-        }
+
+        .section,
+        .activity-box,
+        .instruction-box,
         .quadrant-box {
-            padding: 12px;
-            border-radius: 6px;
-            border: 2px solid;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
         }
-        .quadrant-1 {
-            background: #dbeafe;
-            border-color: #3b82f6;
-        }
-        .quadrant-2 {
-            background: #dcfce7;
-            border-color: #22c55e;
-        }
-        .quadrant-3 {
-            background: #fef3c7;
-            border-color: #eab308;
-        }
-        .quadrant-4 {
-            background: #fee2e2;
-            border-color: #ef4444;
-        }
-        .quadrant-title {
-            font-weight: bold;
-            font-size: 12px;
-            margin-bottom: 5px;
-        }
-        .quadrant-desc {
-            font-size: 11px;
-            margin-bottom: 5px;
-        }
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        .full-width {
-            grid-column: 1 / -1;
-        }
-        h3 {
-            font-size: 14px;
-            margin: 12px 0 8px 0;
-            color: #1e3a8a;
-        }
-        h4 {
-            font-size: 13px;
-            margin: 10px 0 6px 0;
-            color: #1e3a8a;
-        }
-        h5 {
-            font-size: 12px;
-            margin: 8px 0 4px 0;
-            font-weight: bold;
-        }
-        ul, ol {
-            margin: 6px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 3px;
-            font-size: 11px;
-        }
-        p {
-            margin: 6px 0;
-            font-size: 11px;
-        }
-        .footer {
-            background: #1e3a8a;
-            color: white;
-            padding: 12px;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 11px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div style="font-size: 12px; margin-bottom: 15px">
-                <div>EMERGING LEADERS ADVISORY PROGRAM</div>
-                <div>BISHOP GARCÍA DIEGO HIGH SCHOOL</div>
-            </div>
-            <h1>Session 3: 22 Relational Needs</h1>
-            <h2>Building Healthy Relationships</h2>
-            <p><span style="color: rgb(255, 255, 255);">Where Character Grows and Leaders Emerge</span></p>
-            <div style="margin-top: 10px">
-                <span class="time-badge"><i class="fas fa-clock"></i> 30 Minutes Total</span>
-            </div>
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-container">
+          <div style="font-size: 10px">EMERGING LEADERS ADVISORY PROGRAM</div>
+          <div style="font-size: 10px">BISHOP GARCÍA DIEGO HIGH SCHOOL</div>
         </div>
+        <h1>Session 3: 22 Relational Needs</h1>
+        <h2>(Townsend Quadrants)</h2>
+        <p><span style="color: rgb(255, 255, 255)">Where Character Grows and Leaders Emerge</span></p>
+        <div style="margin-top: 8px">
+          <span class="time-badge"><i class="fas fa-clock"></i> 30 Minutes Total</span>
+        </div>
+      </div>
 
-        <div class="main-content">
-            <!-- Welcome + Check-in Section -->
-            <div class="section">
-                <div class="section-header">
-                    <span><i class="fas fa-heart"></i> WELCOME + CHECK-IN</span>
-                    <span class="time-badge">4 Minutes</span>
-                </div>
-                <div class="section-content">
-                    <h3>Activity: Relationship Mapping</h3>
-                    <div class="activity-box">
-                        <h5>Instructions for Facilitators:</h5>
-                        <ol>
-                            <li>Have students think about their most important relationships</li>
-                            <li>Ask them to identify different types of relationships (family, friends, mentors, etc.)</li>
-                            <li>Discuss what makes these relationships meaningful</li>
-                            <li>Share insights about healthy relationship qualities</li>
-                        </ol>
-                    </div>
-                    <div class="instruction-box">
-                        <h5>Purpose & Expected Outcomes:</h5>
-                        <ul>
-                            <li>Introduce the concept of relational needs and healthy relationships</li>
-                            <li>Create awareness of relationship quality vs. quantity</li>
-                            <li>Set foundation for understanding emotional and social needs</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="main-content">
+        <!-- Welcome + Check-in Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-handshake"></i> WELCOME + CHECK-IN</span>
+            <span class="time-badge">6 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>Activity: The Human Knot</h3>
+
+            <div class="activity-box">
+              <h5>Instructions for Facilitators:</h5>
+              <ol>
+                <li>Have all participants stand in a circle (8-12 people works best)</li>
+                <li>
+                  Each person reaches across the circle with their right hand to grab someone else's right hand (not the
+                  person next to them)
+                </li>
+                <li>Then each person reaches across with their left hand to grab a different person's left hand</li>
+                <li>
+                  Without letting go of hands, the group must work together to untangle themselves back into a circle
+                </li>
+                <li>Encourage communication and problem-solving as they work</li>
+              </ol>
             </div>
 
-            <!-- Mini-Teach Section -->
-            <div class="section">
-                <div class="section-header">
-                    <span><i class="fas fa-users"></i> MINI-TEACH</span>
-                    <span class="time-badge">8 Minutes</span>
-                </div>
-                <div class="section-content">
-                    <h3>The 22 Relational Needs Framework</h3>
-                    <div style="background: #f3f4f6; padding: 12px; margin: 8px 0; font-size: 11px; border-radius: 6px">
-                        <strong>Research shows that healthy relationships meet 22 core relational needs. Understanding these needs helps us build stronger, more fulfilling connections with others and recognize what we seek in our relationships.</strong>
-                    </div>
-                    
-                    <h4>Four Categories of Relational Needs</h4>
-                    <div class="quadrants-grid">
-                        <div class="quadrant-box quadrant-1">
-                            <div class="quadrant-title"><i class="fas fa-shield-alt"></i> SECURITY NEEDS</div>
-                            <div class="quadrant-desc">Feeling safe, accepted, and valued in relationships</div>
-                            <p style="font-size: 10px">Examples: Acceptance, comfort, encouragement, respect, support, security</p>
-                        </div>
-                        <div class="quadrant-box quadrant-2">
-                            <div class="quadrant-title"><i class="fas fa-eye"></i> ATTENTION NEEDS</div>
-                            <div class="quadrant-desc">Being seen, heard, and understood by others</div>
-                            <p style="font-size: 10px">Examples: Attention, affection, appreciation, approval, validation, understanding</p>
-                        </div>
-                        <div class="quadrant-box quadrant-3">
-                            <div class="quadrant-title"><i class="fas fa-star"></i> IMPORTANCE NEEDS</div>
-                            <div class="quadrant-desc">Feeling valued and significant in relationships</div>
-                            <p style="font-size: 10px">Examples: Importance, priority, inclusion, recognition, chosen, needed</p>
-                        </div>
-                        <div class="quadrant-box quadrant-4">
-                            <div class="quadrant-title"><i class="fas fa-hands"></i> ACCESS NEEDS</div>
-                            <div class="quadrant-desc">Connection, intimacy, and mutual accessibility</div>
-                            <p style="font-size: 10px">Examples: Access, availability, nearness, intimacy, belonging, togetherness</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="instruction-box">
+              <h5>Purpose & Expected Outcomes:</h5>
+              <ul>
+                <li>Break the ice and create energy in the group</li>
+                <li>Demonstrate the importance of communication and cooperation</li>
+                <li>Set the stage for discussing how we connect with and support each other</li>
+                <li>Introduction to the theme of relational needs and interdependence</li>
+              </ul>
             </div>
+          </div>
         </div>
 
-        <!-- Activity Section (Full Width) -->
-        <div class="section full-width">
-            <div class="section-header">
-                <span><i class="fas fa-puzzle-piece"></i> ACTIVITY: RELATIONAL NEEDS EXPLORATION</span>
-                <span class="time-badge">15 Minutes</span>
-            </div>
-            <div class="section-content">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px">
-                    <div class="activity-box">
-                        <h5><i class="fas fa-clipboard-list"></i> Personal Reflection:</h5>
-                        <ol>
-                            <li>Students identify their top 5 relational needs from the 22 needs</li>
-                            <li>Reflect on which needs are being met in their current relationships</li>
-                            <li>Consider which needs might be lacking</li>
-                            <li>Think about how they can better meet others' relational needs</li>
-                        </ol>
-                    </div>
-                    <div class="instruction-box">
-                        <h5><i class="fas fa-comments"></i> Small Group Discussion:</h5>
-                        <p>In groups of 3-4, students share insights about:</p>
-                        <ul>
-                            <li>Which relational needs resonate most with them</li>
-                            <li>Examples of when these needs were met or unmet</li>
-                            <li>How understanding these needs can improve their relationships</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Mini-Teach Section -->
+        <div class="section">
+          <div class="section-header">
+            <span><i class="fas fa-chalkboard-teacher"></i> MINI-TEACH</span>
+            <span class="time-badge">8 Minutes</span>
+          </div>
+          <div class="section-content">
+            <h3>Dr. John Townsend's Four Quadrants</h3>
 
-        <!-- Debrief Section -->
-        <div class="section full-width">
-            <div class="section-header">
-                <span><i class="fas fa-lightbulb"></i> DEBRIEF</span>
-                <span class="time-badge">3 Minutes</span>
+            <div style="background: #f3f4f6; padding: 12px; margin: 8px 0; font-size: 11px">
+              <strong>Dr. John Townsend's research identifies 22 specific relational needs organized into four quadrants.
+                These "relational nutrients" are essential for human flourishing, leadership development, and emotional
+                health. Just as our bodies need physical nutrients, our souls need these relational nutrients to thrive
+                and develop strong character.</strong>
             </div>
-            <div class="section-content">
-                <div class="activity-box">
-                    <h5>Key Takeaways:</h5>
-                    <ol>
-                        <li><strong>Awareness:</strong> Understanding your own relational needs helps you communicate them to others</li>
-                        <li><strong>Empathy:</strong> Recognizing others' needs helps you build stronger connections</li>
-                        <li><strong>Growth:</strong> Healthy relationships involve mutual meeting of relational needs</li>
-                        <li><strong>Action:</strong> Consider one specific way you can better meet someone's relational needs this week</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p><strong><span style="color: rgb(255, 255, 255);">Bishop García Diego High School - Emerging Leaders Advisory Program</span></strong></p>
-            <p><span style="color: rgb(255, 255, 255);">Based on research in relational psychology and social-emotional learning</span></p>
+            <h4>The Four Quadrants of Relational Needs</h4>
+
+            <div class="quadrants-grid">
+              <div class="quadrant-box quadrant-1">
+                <div class="quadrant-title"><i class="fas fa-heart"></i> QUADRANT 1: BE PRESENT</div>
+                <div class="quadrant-desc">Unconditional felt-love and felt-acceptance.</div>
+                <div class="quadrant-detail">
+                  <strong>Acceptance:</strong> Connect without judgment<br>
+                  <strong>Attunement:</strong> Connect with what another is experiencing<br>
+                  <strong>Validation:</strong> Convey that their experience matters<br>
+                  <strong>Identification:</strong> Share your similar story<br>
+                  <strong>Containment:</strong> Allow venting while staying warm<br>
+                  <strong>Comfort:</strong> Provide support for someone's loss
+                </div>
+              </div>
+
+              <div class="quadrant-box quadrant-2">
+                <div class="quadrant-title"><i class="fas fa-thumbs-up"></i> QUADRANT 2: CONVEY THE GOOD</div>
+                <div class="quadrant-desc">Encourage and celebrate with words high in grace.</div>
+                <div class="quadrant-detail">
+                  <strong>Affirmation:</strong> Draw attention to the good<br>
+                  <strong>Encouragement:</strong> Believe in someone's ability<br>
+                  <strong>Respect:</strong> Assign value<br>
+                  <strong>Hope:</strong> Provide confidence in the future<br>
+                  <strong>Forgiveness:</strong> Cancel a debt<br>
+                  <strong>Celebration:</strong> Acknowledge wins
+                </div>
+              </div>
+
+              <div class="quadrant-box quadrant-3">
+                <div class="quadrant-title"><i class="fas fa-lightbulb"></i> QUADRANT 3: PROVIDE REALITY</div>
+                <div class="quadrant-desc">High truth that catalyzes growth.</div>
+                <div class="quadrant-detail">
+                  <strong>Clarification:</strong> Bring order to confusion<br>
+                  <strong>Perspective:</strong> Offer a different viewpoint<br>
+                  <strong>Insight:</strong> Convey deeper understanding<br>
+                  <strong>Feedback:</strong> Give a personal response<br>
+                  <strong>Confrontation:</strong> Face someone with appeal to change
+                </div>
+              </div>
+
+              <div class="quadrant-box quadrant-4">
+                <div class="quadrant-title"><i class="fas fa-rocket"></i> QUADRANT 4: CALL TO ACTION</div>
+                <div class="quadrant-desc">Challenge someone to take steps toward growth.</div>
+                <div class="quadrant-detail">
+                  <strong>Advice:</strong> Recommend an action step<br>
+                  <strong>Structure:</strong> Provide a framework<br>
+                  <strong>Challenge:</strong> Strongly recommend difficult action<br>
+                  <strong>Development:</strong> Create a growth environment<br>
+                  <strong>Service:</strong> Guide engagement to giving back
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-box">
+              <h5>Four-Quadrant Movement Activity:</h5>
+              <ol>
+                <li>Post the four quadrants in the corners of the room or designate four areas</li>
+                <li>Explain each quadrant briefly</li>
+                <li>
+                  Ask students to walk around to each location and read each of the relational nutrients listed in each
+                  quadrant
+                </li>
+                <li>
+                  Ask the guiding questions one at a time and have students move physically to the quadrant that
+                  represents their answer
+                </li>
+                <li>
+                  Ask one person per quadrant to share a sentence or two about why they are standing where they are
+                  standing
+                </li>
+              </ol>
+            </div>
+
+            <div class="instruction-box">
+              <h5>Guiding Questions:</h5>
+              <div class="question-item">
+                <span class="question-number">1</span>
+                <span><strong>Which quadrant feels most supplied in your life?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">2</span>
+                <span><strong>Which quadrant feels most lacking in your life?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">3</span>
+                <span><strong>Which quadrant do you most offer others?</strong></span>
+              </div>
+              <div class="question-item">
+                <span class="question-number">4</span>
+                <span><strong>What quadrant do you need to focus growth in offering?</strong></span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Activity Section (Full Width) -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-tools"></i> ACTIVITY: BRIDGE BUILD CHALLENGE</span>
+          <span class="time-badge">15 Minutes</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px">
+            <div class="activity-box">
+              <h5><i class="fas fa-list-check"></i> Materials Needed:</h5>
+              <ul>
+                <li>Drinking straws (20-30 per team)</li>
+                <li>Masking tape or scotch tape (1 roll per team)</li>
+                <li>Timer</li>
+                <li>Measuring tape or ruler</li>
+                <li>Optional: Small prizes for recognition</li>
+              </ul>
+            </div>
+
+            <div class="instruction-box">
+              <h5><i class="fas fa-trophy"></i> Competition Details:</h5>
+              <p><strong>Challenge:</strong> Build the tallest free-standing tower using only straws and tape</p>
+              <p><strong>Time Limit:</strong> 10 minutes building + 2-3 minutes measuring</p>
+              <p>
+                <strong>Rules:</strong> Tower must stand on its own for at least 10 seconds, only straws and tape may be
+                used, tower cannot be attached to anything else, all team members must contribute
+              </p>
+              <p><strong>Recognition:</strong> Tallest tower, most creative design, best teamwork</p>
+            </div>
+
+            <div style="background: #f3f4f6; padding: 12px">
+              <h5><i class="fas fa-instructions"></i> Detailed Instructions:</h5>
+              <ol>
+                <li><strong>Team Formation:</strong> Divide students into teams of 3-4 people</li>
+                <li>
+                  <strong>Challenge Explanation:</strong> Teams must build the tallest free-standing tower using only
+                  straws and tape
+                </li>
+                <li><strong>Begin Building:</strong> Start 10-minute timer and let teams work</li>
+                <li><strong>Facilitator Role:</strong> Observe team dynamics and communication patterns</li>
+                <li><strong>Testing Phase:</strong> Measure towers that stand for 10+ seconds</li>
+                <li><strong>Recognition:</strong> Acknowledge multiple categories of success</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="activity-box" style="margin-top: 8px">
+            <h5><i class="fas fa-lightbulb"></i> Learning Connection:</h5>
+            <p>
+              This challenge directly demonstrates the need for
+              <strong>all four quadrants of relational needs</strong> in action. Teams will need
+              <strong>Quadrant 1 (Be Present)</strong> - accepting different ideas and staying connected during stress.
+              They'll need <strong>Quadrant 2 (Convey the Good)</strong> - encouraging teammates and celebrating small
+              wins. <strong>Quadrant 3 (Provide Reality)</strong> becomes essential when offering feedback on designs
+              and clarifying the plan. Finally, <strong>Quadrant 4 (Call to Action)</strong> emerges as teams challenge
+              each other to try new approaches and provide structure for their building process. Watch for which
+              quadrants naturally emerge and which teams might be missing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debrief Section -->
+      <div class="section full-width">
+        <div class="section-header">
+          <span><i class="fas fa-comments"></i> DEBRIEF</span>
+          <span class="time-badge">1 Minute</span>
+        </div>
+        <div class="section-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+            <div class="activity-box">
+              <h5>Tower Examination & Winners:</h5>
+              <ul>
+                <li>Examine each team's tower and measure heights</li>
+                <li>Declare winners in multiple categories</li>
+                <li>Acknowledge the collaborative effort required</li>
+                <li>Brief recognition of teamwork observed</li>
+              </ul>
+            </div>
+
+            <div class="instruction-box">
+              <h5>Quick Reflection Questions:</h5>
+              <div class="question-item">
+                <span class="question-number">1</span>
+                <div>
+                  <p><strong>What quadrants did your team use most during the challenge?</strong></p>
+                </div>
+              </div>
+              <div class="question-item">
+                <span class="question-number">2</span>
+                <div>
+                  <p><strong>Which relational nutrients did you need more of?</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>
+          <strong><span style="color: rgb(255, 255, 255)">Bishop García Diego High School - Emerging Leaders Advisory Program</span></strong>
+        </p>
+        <p>
+          <span style="color: rgb(255, 255, 255)">
+            Based on Dr. John Townsend's "People Fuel: Fill Your Tank for Life, Love, and Leadership"</span>
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
         `
       }} />
