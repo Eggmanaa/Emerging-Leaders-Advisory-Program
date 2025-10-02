@@ -393,6 +393,55 @@ app.get('/session-1', (c) => {
             margin-top: 12px;
             font-size: 9px;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .harms-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Override all inline grid styles to single column on mobile */
+            div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Improve mobile readability */
+            .activity-box,
+            .instruction-box {
+                margin: 8px 0;
+                padding: 12px;
+            }
+            
+            .section-content {
+                padding: 10px;
+            }
+            
+            h3 {
+                font-size: 14px;
+            }
+            
+            h4, h5 {
+                font-size: 12px;
+            }
+            
+            p, li {
+                font-size: 11px;
+                line-height: 1.4;
+            }
+            
+            .time-badge {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -824,6 +873,55 @@ app.get('/session-2', (c) => {
             margin-top: 20px;
             font-size: 11px;
             grid-column: 1 / -1;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .essence-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Override all inline grid styles to single column on mobile */
+            div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Improve mobile readability */
+            .activity-box,
+            .instruction-box {
+                margin: 10px 0;
+                padding: 15px;
+            }
+            
+            .section-content {
+                padding: 12px;
+            }
+            
+            h3 {
+                font-size: 16px;
+            }
+            
+            h4, h5 {
+                font-size: 14px;
+            }
+            
+            p, li {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+            
+            .time-badge {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -1849,6 +1947,60 @@ app.get('/session-4', (c) => {
           -webkit-print-color-adjust: exact;
         }
       }
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        .main-content {
+          grid-template-columns: 1fr !important;
+        }
+        
+        .zones-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Override all inline grid styles to single column on mobile */
+        div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Improve mobile readability */
+        .activity-box,
+        .instruction-box {
+          margin: 8px 0;
+          padding: 12px;
+        }
+        
+        .section-content {
+          padding: 10px;
+        }
+        
+        h3 {
+          font-size: 14px;
+        }
+        
+        h4, h5 {
+          font-size: 12px;
+        }
+        
+        p, li {
+          font-size: 11px;
+          line-height: 1.4;
+        }
+        
+        .time-badge {
+          font-size: 10px;
+          padding: 4px 8px;
+        }
+        
+        .zone-box {
+          margin: 6px 0;
+          padding: 10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -2409,6 +2561,64 @@ app.get('/session-5', (c) => {
         .relationship-box {
           print-color-adjust: exact;
           -webkit-print-color-adjust: exact;
+        }
+      }
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        .main-content {
+          grid-template-columns: 1fr !important;
+        }
+        
+        .relationships-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        .ninja-rules {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Override all inline grid styles to single column on mobile */
+        div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Improve mobile readability */
+        .activity-box,
+        .instruction-box {
+          margin: 8px 0;
+          padding: 12px;
+        }
+        
+        .section-content {
+          padding: 10px;
+        }
+        
+        h3 {
+          font-size: 14px;
+        }
+        
+        h4, h5 {
+          font-size: 12px;
+        }
+        
+        p, li {
+          font-size: 11px;
+          line-height: 1.4;
+        }
+        
+        .time-badge {
+          font-size: 10px;
+          padding: 4px 8px;
+        }
+        
+        .relationship-box {
+          margin: 6px 0;
+          padding: 10px;
         }
       }
     </style>
