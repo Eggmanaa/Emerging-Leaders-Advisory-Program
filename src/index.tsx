@@ -1349,6 +1349,10 @@ app.get('/session-3', (c) => {
 
       /* Mobile Responsive Styles */
       @media (max-width: 768px) {
+        .main-content {
+          grid-template-columns: 1fr !important;
+        }
+        
         .quadrants-grid {
           grid-template-columns: 1fr !important;
         }
