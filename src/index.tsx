@@ -156,8 +156,8 @@ app.get('/', (c) => {
               <span className="duration">30 minutes</span>
             </a>
             <a href="/session-3" className="session-card">
-              <h4>Session 3: 22 Relational Needs</h4>
-              <p>Building healthy relationships and communication skills</p>
+              <h4>Session 3: Four Quadrants</h4>
+              <p>Understanding Dr. John Townsend's framework for relational nutrients</p>
               <span className="duration">30 minutes</span>
             </a>
             <a href="/session-4" className="session-card">
@@ -1248,6 +1248,50 @@ app.get('/session-3', (c) => {
           -webkit-print-color-adjust: exact;
         }
       }
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        .quadrants-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Override all inline grid styles to single column on mobile */
+        div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Increase padding and margins for better mobile readability */
+        .activity-box,
+        .instruction-box {
+          margin: 8px 0;
+          padding: 16px;
+        }
+        
+        .section-content {
+          padding: 12px;
+        }
+        
+        /* Adjust font sizes for mobile */
+        h5 {
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+        
+        p {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+        
+        /* Make time badges more prominent on mobile */
+        .time-badge {
+          font-size: 12px;
+          padding: 6px 14px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1258,7 +1302,7 @@ app.get('/session-3', (c) => {
           <div style="font-size: 10px">EMERGING LEADERS ADVISORY PROGRAM</div>
           <div style="font-size: 10px">BISHOP GARCÍA DIEGO HIGH SCHOOL</div>
         </div>
-        <h1>Session 3: 22 Relational Needs</h1>
+        <h1>Session 3: Four Quadrants</h1>
         <h2>(Townsend Quadrants)</h2>
         <p><span style="color: rgb(255, 255, 255)">Where Character Grows and Leaders Emerge</span></p>
         <div style="margin-top: 8px">
